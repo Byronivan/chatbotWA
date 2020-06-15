@@ -10,4 +10,8 @@ ciController.postValidCi = async (req, res, next) => {
 
 }
 
+ciController.getHello = async (req, res, next) => {
+    res.json({hello:"hello world"})
+}
+
 module.exports=ciController;
