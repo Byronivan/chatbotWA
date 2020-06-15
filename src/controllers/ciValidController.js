@@ -33,9 +33,15 @@ async function funDesicion(body){
         case "AUTENTIFICAR":  
             console.log(body);  
             let valCi = await validCi(input.toString());
-            var resultado=null
-            if(valCi!=null){
+            console.log(valCi);
+            var resultado=null            
+            if(valCi!="Cedula Incorrecta" && valCi.length!=0 ){
                 resultado={"respuesta":[valCi[0].p_nombre,valCi[0].p_apellido]};
+            }else{
+                resultado={"respuesta":valCi};
+            }
+            if(valCi=="No tiene Deuda"){
+                resultado={"respuesta":"No tiene deuda"};
             }
             return resultado;
         case "PRESTAMOS":   
