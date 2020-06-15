@@ -30,11 +30,12 @@ async function funDesicion(body){
     const { input, bandera } = body;
     let type = bandera.toUpperCase();
     switch (type) {
-        case "AUTENTIFICAR":    
+        case "AUTENTIFICAR":  
+            console.log(body);  
             let valCi = await validCi(input);
             return {"respuesta":[valCi[0].p_nombre,valCi[0].p_apellido]};
         case "PRESTAMOS":
-            console.log(body);
+            
             return {"respuesta":[{"label":"internet","value":{"input":{"text":"internet"}}},{"label":"chrome","value":{"input":{"text":"chrome"}}}]};
         default:
             break;
