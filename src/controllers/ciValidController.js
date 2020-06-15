@@ -33,7 +33,10 @@ async function funDesicion(body){
         case "AUTENTIFICAR":  
             console.log(body);  
             let valCi = await validCi(input.toString());
-            var resultado={"respuesta":[valCi[0].p_nombre,valCi[0].p_apellido]}
+            var resultado=null
+            if(valCi!=null){
+                resultado={"respuesta":[valCi[0].p_nombre,valCi[0].p_apellido]};
+            }
             return resultado;
         case "PRESTAMOS":   
             
