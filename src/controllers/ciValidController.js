@@ -14,7 +14,8 @@ async function funDesicion(body){
     let type = bandera.toUpperCase();
     switch (type) {
         case "AUTENTIFICAR":    
-            let valCi = await validCi(input);
+            //let valCi = await validCi(input);
+            //console.log(valCi);
             return {"respuesta":["Jhonny","Zapata"]};
         case "PRESTAMOS":
             console.log(body);
