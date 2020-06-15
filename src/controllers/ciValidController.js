@@ -3,23 +3,24 @@ const ciController = {};
 const database = require('../services/database');
 
 ciController.postValidCi = async (req, res, next) => {
-    const { valor, tipo } = req.body;
-    
-    let type = tipo.toUpperCase();
-    console.log(type);
+    res.json(await funDesicion(req.body));
+}
+
+
+async function funDesicion(body){
+    //{"respuesta":["Jhonny","Zapata"]}
+
+    const { input, bandera } = body;
+    let type = bandera.toUpperCase();
     switch (type) {
-        case "AUTENTIFICACION":
-            let valCi = await validCi(valor);
-            console.log(valCi)
-            res.json({cedula:valCi})
-            return valCi;
+        case "AUTENTIFICAR":
+            let valCi = await validCi(input);
+            return {"respuesta":["Jhonny","Zapata"]};
         case "LISTA_CATEGORIAS":
-            res.json({valor:"funciona 2"})
             return "funcion 2";
         default:
             break;
     }
-
 }
 
 ciController.getHello = async (req,res,next) =>{
