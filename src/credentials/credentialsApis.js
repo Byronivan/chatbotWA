@@ -1,6 +1,6 @@
 var conectionsApi={
    sqlServer:{
-       ipserver: '34.70.45.141',
+       ipserver: '34.66.171.225',
        user: 'sqlserver',
        password: 'Soft2020',
        port:'1434',

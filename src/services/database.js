@@ -26,7 +26,7 @@ async function consultarCliente(cedula) {
             cliente = result;
             return cliente.recordset;
         } else {
-            return cedulaValida;
+            return null;
         }
     } catch (err) {
         return err
