@@ -33,7 +33,8 @@ async function funDesicion(body){
         case "AUTENTIFICAR":  
             console.log(body);  
             let valCi = await validCi(input);
-            return {"respuesta":[valCi[0].p_nombre,valCi[0].p_apellido]};
+            var resultado={"respuesta":[valCi[0].p_nombre,valCi[0].p_apellido]}
+            return resultado;
         case "PRESTAMOS":
             
             return {"respuesta":[{"label":"internet","value":{"input":{"text":"internet"}}},{"label":"chrome","value":{"input":{"text":"chrome"}}}]};
