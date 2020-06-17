@@ -8,25 +8,6 @@ ciController.postValidCi = async (req, res, next) => {
 
 
 async function funDesicion(body){
-    //{"respuesta":["Jhonny","Zapata"]}
-    /*
-  "cedula": [
-    {
-      "id_cliente": 2,
-      "p_nombre": "Fernando",
-      "s_nombre": "Manuel",
-      "p_apellido": "Paredes",
-      "s_apellido": "Cepeda",
-      "numero_cedula": 602887234,
-      "telefono": 985365601,
-      "correo": "fparedes19@gmail.com",
-      "direccion": "Pomasqui - Barrio el Común",
-      "id_telegram": null,
-      "edad": 47
-    }
-  ]
-}
-*/
     console.log(body);  
     const { input, bandera,fecha } = body;
     //input convertir a string
@@ -77,11 +58,6 @@ async function funDesicion(body){
             break;
     }
 }
-
-ciController.getHello = async (req,res,next) =>{
-    res.json({hello:"hello world"})
-}
-
 
 function diasMora(fechaI,fechaF){
     var fechaInicio = new Date(fechaI).getTime();
